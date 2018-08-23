@@ -23,10 +23,10 @@ module.exports = {
       name: "Kiran Reddy",
       email: '#',
       telegram: '#',
-      twitter: '#',
+      twitter: 'V2kiran',
       github: 'V2Kiran',
       rss: '#',
-      vk: 'v2kiran'
+      vk: 'kiranrd'
     }
   },
   plugins: [
