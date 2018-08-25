@@ -16,7 +16,7 @@ path: "/about"
 	</blockquote>
 </figure>
 
-*I began my career in 2003 but started software development around 2008 when [PowerShell] was introduced. Prior to this I had tried my hand at C# and vbscript but they never felt intuitive to me so didnt really pick them up. 10 years later I am still learning but I feel I have learned enough to train others in the mystic arts of powershell.*
+*I began my career in 2003 but started software development around 2008 when [PowerShell] was introduced. Prior to this I had tried my hand at C# and vbscript but they never felt intuitive to me so didnt really pick them up. 10 years later I am still learning but I know it wont ever stop.*
 
 *I was born in India and did my schooling there, graduated in Industrial Engineering & Manangment from [BMS college of Engineering][BMSCE] (India). Since graduation, I have held various roles in IT ranging from configuring desktops to providing consultancy expertise to major enterprises.*
 
@@ -26,7 +26,7 @@ path: "/about"
 	<img src="./introvert.jpg" alt="introvert">
 </figure>
 
-*On a personal front I am an [introvert] by nature love reading books(grew up reading [Hardy Boys] & [Famous Five] ) , enjoy Swmimming, listening to music on my [KEF LS50 Wireless] speakers and watching Netflix. I rate [Seinfeld] as the best show ever, followed by [breaking bad], [Dexter] & [Game of Thrones].Bit of a gadget geek love apple products.*
+*On a personal front I am an [introvert] by nature love reading books(grew up reading [Hardy Boys] & [Famous Five] ) , enjoy Swmimming, listening to music on my [KEF LS50 Wireless] speakers and watching Netflix. I rate [Seinfeld] as the best show ever, followed by [breaking bad], [Dexter] & [Game of Thrones].*
 
 
 
