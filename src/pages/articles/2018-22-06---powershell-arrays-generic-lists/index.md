@@ -16,7 +16,7 @@ In PowerShell the most common method of storing data is to store it in an ‘Arr
 
 ## Array
  
-```js
+```powershell
 # Initialize the array
 $myarray = @()
  
@@ -38,7 +38,7 @@ Instead of expanding the original array the contents of the ‘myarray’ variab
 
 ## System.Collections.Arraylist
  
-```js
+```powershell
  #Initialize the array
 $myarray = New-Object System.Collections.ArrayList
 
@@ -58,7 +58,7 @@ This is looking much better but again the ‘arraylist’ allows just about any 
 
 ## Generic Lists
  
-```js
+```powershell
  #Initialize the array
 $myarray = New-Object 'System.Collections.Generic.List[Int]'
 
@@ -80,7 +80,7 @@ While we could add the integer 1 notice the exception that is thrown when we try
 So you wanted to create a list of ‘string’ items then you would create the list as so:
 
  
-```js
+```powershell
 $myarray = New-Object 'System.Collections.Generic.List[String]'
 ```
  

@@ -5,8 +5,7 @@ module.exports = {
     subtitle: 'My Personal tech blog on software and IT',
     copyright: '2018 © All rights reserved.',
     disqusShortname: '',
-    menu: [
-      {
+    menu: [{
         label: 'Articles',
         path: '/'
       },
@@ -15,8 +14,8 @@ module.exports = {
         path: '/about/'
       },
       {
-        label: 'Contact me',
-        path: '/contact/'
+        label: 'Projects',
+        path: '/projects/'
       }
     ],
     author: {
@@ -26,11 +25,10 @@ module.exports = {
       twitter: 'V2kiran',
       github: 'V2Kiran',
       rss: '#',
-      vk: 'kiranrd'
+      vk: 'in/kiranrd'
     }
   },
-  plugins: [
-    {
+  plugins: [{
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/pages`,
@@ -51,19 +49,25 @@ module.exports = {
             }
           }
         `,
-        feeds: [
-          {
-            serialize: ({ query: { site, allMarkdownRemark } }) => (
-              allMarkdownRemark.edges.map(edge =>
-                Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.frontmatter.description,
-                  date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.site_url + edge.node.fields.slug,
-                  guid: site.siteMetadata.site_url + edge.node.fields.slug,
-                  custom_elements: [{ 'content:encoded': edge.node.html }]
-                }))
-            ),
-            query: `
+        feeds: [{
+          serialize: ({
+            query: {
+              site,
+              allMarkdownRemark
+            }
+          }) => (
+            allMarkdownRemark.edges.map(edge =>
+              Object.assign({}, edge.node.frontmatter, {
+                description: edge.node.frontmatter.description,
+                date: edge.node.frontmatter.date,
+                url: site.siteMetadata.site_url + edge.node.fields.slug,
+                guid: site.siteMetadata.site_url + edge.node.fields.slug,
+                custom_elements: [{
+                  'content:encoded': edge.node.html
+                }]
+              }))
+          ),
+          query: `
               {
                 allMarkdownRemark(
                   limit: 1000,
@@ -88,16 +92,14 @@ module.exports = {
                 }
               }
             `,
-            output: '/rss.xml'
-          }
-        ]
+          output: '/rss.xml'
+        }]
       }
     },
     {
       resolve: 'gatsby-transformer-remark',
       options: {
-        plugins: [
-          {
+        plugins: [{
             resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 960
@@ -105,7 +107,9 @@ module.exports = {
           },
           {
             resolve: 'gatsby-remark-responsive-iframe',
-            options: { wrapperStyle: 'margin-bottom: 1.0725rem' }
+            options: {
+              wrapperStyle: 'margin-bottom: 1.0725rem'
+            }
           },
           'gatsby-remark-prismjs',
           'gatsby-remark-copy-linked-files',
@@ -117,7 +121,9 @@ module.exports = {
     'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-plugin-google-analytics',
-      options: { trackingId: 'UA-73379983-2' }
+      options: {
+        trackingId: 'UA-73379983-2'
+      }
     },
     {
       resolve: `gatsby-plugin-google-fonts`,
@@ -148,7 +154,10 @@ module.exports = {
               }
           }`,
         output: '/sitemap.xml',
-        serialize: ({ site, allSitePage }) =>
+        serialize: ({
+            site,
+            allSitePage
+          }) =>
           allSitePage.edges.map((edge) => {
             return {
               url: site.siteMetadata.url + edge.node.path,
