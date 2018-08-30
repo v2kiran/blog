@@ -37,8 +37,8 @@ export default function Tags({ pathContext }) {
             {lengthByTags.map(tag => (
               <div className="tags has-addons" key={tag.tagName}>
                 <Link to={`/tags/${tag.tagName}`}>
-                  <span className="tag is-info is-large">{tag.tagName}</span>
-                  <span className="tag is-large">{tag.length}</span>
+                  <span className="tag is-info ">{tag.tagName}</span>
+                  <span className="tag">{tag.length}</span>
                 </Link>
               </div>
             ))}

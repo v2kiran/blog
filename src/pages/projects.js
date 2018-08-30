@@ -12,13 +12,14 @@ const Projects = () => (
                     <h6 className="title has-text-light is-6">PSAlphaFS</h6>
                 </div>
                 <div className="message-body">
+                <p>
                 PSAlphaFS is a wrapper for the ALphaFS .NET library, 
                 providing a small subset of functions that overcome 
                 the <strong>MAX_PATH limitation of 260 characters</strong> of the windows filesystem.
-
+                </p>
                 <p className="projects">
                 This module is intended to work on windows alone because Linux and Unix systems
-                do not have the 260 length limitation.
+                do not have the 260 character length limitation.
                 Also PowerShell Version 6 supports long paths natively so if you have PS v6 installed
                 you do not need this module.
                 </p>
@@ -28,13 +29,13 @@ const Projects = () => (
             <p className="buttons">
                     <a className="button" href="https://github.com/v2kiran/PSAlphaFS">
                         <span className="icon">
-                        <i className="mdi mdi-github-circle"></i>
+                        <i className="fab fa-github"></i>
                         </span>
                         <span>GitHub </span>
                     </a>
                     <a className="button is-primary" href="https://www.powershellgallery.com/packages/PSAlphaFS/2.0.0.1">
                         <span className="icon">
-                        <i className="mdi mdi-view-module"></i>
+                        <i className="fas fa-terminal"></i>
                         </span>
                         <span>PSGallery</span>
                     </a>
@@ -46,26 +47,29 @@ const Projects = () => (
                 <h6 className="title has-text-light is-6">PSLiteDB</h6>
                 </div>
                 <div className="message-body">
+                    <p>
                     PSLiteDB is a PowerShell wrapper for LiteDB which is a <strong>noSQL singlefile
                     datastore just like SQLite.</strong> PSLiteDB has been compiled against the .NET
                     Standard 2 which means you can use this module with both Windows 
-                    PowerShell 5 and above on windows and PowerShell Core 6 or above on linux.
+                    PowerShell 5 and above on windows and PowerShell Core 6 or above on linux. PS v6 is open source
+                    </p>
+
                     <p className="projects">
                         The advantage of using a nosql database is that you do not need to create tables
-                        with any particular schema. Columns can be added or removed on the fly.
+                        with any particular schema. Columns in tables can be added or removed on the fly.
                     </p>
                 </div>
             </article>
             <p className="buttons">
                     <a className="button" href="https://github.com/v2kiran/PSLiteDB">
                         <span className="icon">
-                        <i className="mdi mdi-github-circle"></i>
+                        <i className="fab fa-github"></i>
                         </span>
                         <span>GitHub</span>
                     </a>
                     <a className="button is-primary" href="https://www.powershellgallery.com/packages/PSLiteDB/0.1.1">
                         <span className="icon">
-                        <i className="mdi mdi-view-module"></i>
+                        <i className="fas fa-terminal"></i>
                         </span>
                         <span>PSGallery</span>
                     </a>
@@ -92,13 +96,13 @@ const Projects = () => (
             <p className="buttons">
                     <a className="button" href="https://github.com/v2kiran/PSSecret">
                         <span className="icon">
-                        <i className="mdi mdi-github-circle"></i>
+                        <i className="fab fa-github"></i>
                         </span>
                         <span>GitHub</span>
                     </a>
                     <a className="button is-primary" href="https://www.powershellgallery.com/packages/PSSecret/1.0.0">
                         <span className="icon">
-                        <i className="mdi mdi-view-module"></i>
+                        <i className="fas fa-terminal"></i>
                         </span>
                         <span>PSGallery</span>
                     </a>

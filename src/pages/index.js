@@ -1,7 +1,4 @@
 import React from 'react'
-import Link from 'gatsby-link'
-
-import Hero from '../components/Hero'
 import PostList from '../components/PostList'
 
 export default function IndexPage(props) {
@@ -12,27 +9,20 @@ export default function IndexPage(props) {
     }) => new Date(node.frontmatter.date) < new Date()) // hide reserved posts
     .map(edge => edge.node)
 
-  return ( <
-    div >
-    <
-    Hero subtitle = "My Personal blog on software and IT" /
-    >
-
-    <
-    div className = "container" >
-    <
-    div className = "columns" >
-    <
-    div className = "column is-10-mobile is-offset-1-mobile is-10-tablet is-offset-1-tablet" >
-    <
-    PostList postsData = {
-      postsData
-    }
-    /> < /
-    div > <
-    /div> < /
-    div > <
-    /div>
+  return ( 
+  <div >
+    <div className = "container" >
+      <div className = "columns" >
+ 
+        <div className = "column  is-10-mobile is-offset-1-mobile is-10-tablet is-offset-1-tablet" >
+        <div className="content">
+        <h1 className="has-text-weight-bold is-size-2">Latest Posts</h1>
+      </div>
+          <PostList postsData = {postsData}/> 
+        </div> 
+      </div>
+     </div>
+  </div>
   )
 }
 
@@ -41,12 +31,12 @@ export const pageQuery = graphql `
     allMarkdownRemark(limit: 1000, sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
-          excerpt(pruneLength: 250)
+          excerpt(pruneLength: 400)
           id
           frontmatter {
             title
             category
-            date(formatString: "YYYY/MM/DD")
+            date(formatString: "MMMM DD, YYYY")
             path
           }
         }

@@ -1,42 +1,25 @@
-//@import url('//cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css'); 3273dc
-
+@import url('https://use.fontawesome.com/releases/v5.2.0/css/all.css');
+@import '~prismjs/themes/prism-okaidia.css';
+@import "~bulma";
+//@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500");
+//@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
 html {
   background-color: #fdfdfd;
 }
 
 
+
 h1,h2,h3,h4,h5,h6 {
-  font-family: 'Google Sans';
+  margin-right: 0.7rem;
+  font-family: -apple-system, BlinkMacSystemFont,'Google Sans', 
+  'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 
-
-// 25px, 17px font size, roboto
-p {
-  font-size: 18px;
-  font-weight: 400;
-  font-stretch: 100%;
-  font-feature-settings: "kern" 1;
-  font-kerning: normal;
-  
-
-  //letter-spacing: 0.02em;
-  color: #212121;
-  line-height: 33px;
-  font-family:-apple-system,BlinkMacSystemFont,'segoe ui','Roboto','Helvetica Neue','Nunito',sans-serif, serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  word-break: keep-all;
-  margin-bottom: 0%;
-  margin-left: 0%;
-  margin-right: 0%;
-  margin-top: 0%;
-  padding: 0,0,0,0;
-
-}
-
-p.projects{
+.message-body{
   font-family:-apple-system,BlinkMacSystemFont,'segoe ui','Roboto','Helvetica Neue';
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
   font-stretch: 100%;
   font-feature-settings: "kern" 1;
@@ -45,7 +28,7 @@ p.projects{
 
   letter-spacing: 0.02em;
   color: #212121;
-  line-height: 24px;
+  line-height: 20px;
   word-break: keep-all;
   margin-bottom: 0%;
   margin-left: 0%;

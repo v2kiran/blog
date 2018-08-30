@@ -5,16 +5,27 @@ import Link from 'gatsby-link'
 const PostList = ({ postsData }) => (
   <div>
     {postsData.map(post => (
-      <div key={post.id} className="box" style={{ marginTop: '1rem' }}>
+      <div 
+      key={post.id} 
+      className="box" 
+      style={{border: '1px solid #eaecee', padding: '2em 4em', marginTop: '1rem' }}
+      >
         <p>
-          <Link to={post.frontmatter.path}>
-            <strong>{post.frontmatter.title}</strong>
+          <Link className="has-text-link" to={post.frontmatter.path}>
+            {post.frontmatter.title}
           </Link>
-          {' - '}
-          <small>{post.frontmatter.date}</small>{' '}
+          <span> &bull; </span>
+          <small>{post.frontmatter.date}</small>{'  '}
           <span className="tag is-info">{post.frontmatter.category}</span>
         </p>
-        <p>{post.excerpt}</p>
+        <br></br>
+        <div style={{fontSize: '14px'}}>
+          <p>{post.excerpt}</p>
+        </div>
+        <br></br>
+        <Link className="button is-small" to={post.frontmatter.path}>
+            Keep Reading →
+        </Link>
       </div>
     ))}
   </div>
