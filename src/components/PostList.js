@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 
+//title color ,color:'#37A8D1'
+
 const PostList = ({ postsData }) => (
   <div>
     {postsData.map(post => (

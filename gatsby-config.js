@@ -51,11 +51,9 @@ module.exports = {
             resolve: 'gatsby-plugin-google-fonts',
             options: {
               fonts: [
-                'Roboto',
-                'Google Sans',
-                'Nunito',
-                'Open Sans',
-                'Source Sans Pro'
+                'Fira Mono',
+                'Google Sans'
+
               ]
             }
           },

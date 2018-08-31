@@ -50,30 +50,7 @@
   }
 }
 
-// resolve conflicts between bulma css preset and prismjs
-pre[class*='language-'] .tag,
-pre[class*='language-'] .number {
-  align-items: stretch;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color:blue;
-  border-radius: 0;
-  display: inline;
-  font-size: 8px;
-  justify-content: flex-start;
-  line-height: normal;
-  padding: 0;
-  white-space: pre;
-  margin-right: 0;
-  min-width: auto;
-  text-align: left;
-  vertical-align: baseline;
-}
 
-
-:not(pre) > code[class*='language-'] {
-  background:rgba(27, 31, 35, 0.05) ;
-  color: #ff3860;
-}
 
 // embed tweet styling   background: rgba(27, 31, 35, 0.05);
 .twitter-tweet-rendered {
