@@ -53,7 +53,9 @@ module.exports = {
               fonts: [
                 'Roboto',
                 'Google Sans',
-                'Nunito'
+                'Nunito',
+                'Open Sans',
+                'Source Sans Pro'
               ]
             }
           },

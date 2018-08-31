@@ -2,7 +2,6 @@ import React from 'react'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
-
 import About from '../components/About'
 
 import './blog-post.scss'
@@ -12,6 +11,12 @@ const ButtonWrapper = styled.div`
   justify-content: center;
   margin-top: 1rem;
 `
+    //browser window scroll (in pixels) after which the "back to top" link is shown
+    var offset = 300, 
+    //browser window scroll (in pixels) after which the "back to top" link opacity is reduced 
+    offsetOpacity = 1200,
+    //duration of the top scrolling animation (in ms)
+    scrollDuration = 700;
 
 const TagList = ({ tags }) => (
   <div>
@@ -55,6 +60,7 @@ export default class Template extends React.Component {
     const { markdownRemark: post } = this.props.data
     const { siteUrl } = this.props.data.site.siteMetadata
     const tags = post.frontmatter.tags
+    //const myExtScript = require('./topscroll') 
 
     return (
       <div className="container ">
@@ -62,10 +68,14 @@ export default class Template extends React.Component {
           <div className="column is-10-mobile is-offset-1-mobile is-8-tablet is-offset-2-tablet is-9-desktop is-offset-1-desktop">
             <div className="content">            
               <div className="post-title">
+              <a name="top"></a>
                 <h1 className="title is-size-2 has-text-weight-bold is-bold-light has-text-dark-light"> {post.frontmatter.title} </h1>{' '}
-                <span className="has-text-info is-size-6">
+                <span className="has-text-dark is-size-6">
                   {' '}
+                  <div style={{fontSize: "13px"}}>
                   {post.frontmatter.date}{' '}
+                  </div>
+                  
                 </span>{' '}
               </div>{' '}
               <br></br>
@@ -75,9 +85,10 @@ export default class Template extends React.Component {
                 }}
               />{' '}
               <hr />
+              <a href="#top">Back to top</a>
               <TagList tags={tags} /> <About />
               <ButtonWrapper>
-                <Link to="/" className="button is-info is-large">
+                <Link to="/" className="button is-light  is-large">
                   <span className="icon is-medium">
                     <i className="fas fa-36px fa-list" />
                   </span>{' '}
@@ -88,6 +99,7 @@ export default class Template extends React.Component {
           </div>{' '}
         </div>{' '}
       </div>
+      
     )
   }
 }

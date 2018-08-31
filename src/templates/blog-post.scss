@@ -21,37 +21,32 @@
     }
 
     p {
-      font-size: 16px;
+      font-size: 20px;
       font-weight: 400;
       font-stretch: 100%;
       font-feature-settings: "kern" 1;
       font-kerning: normal;
-      line-height: 28px;
+      line-height: 29px;
     
-      //letter-spacing: 0.02em;
-      color: #4a4a4a;
+      letter-spacing: 0.02em;
+      //color: #363636;
+      color: #2e444e;
       
-      font-family:-apple-system,BlinkMacSystemFont,'segoe ui','Roboto','Helvetica Neue','Nunito',sans-serif, serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-family:-apple-system,BlinkMacSystemFont,'segoe ui', 'Source Sans Pro','Nunito','Roboto','Helvetica Neue',sans-serif, serif,"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
       word-break: keep-all;
       margin-bottom: 0%;
       margin-left: 0%;
       margin-right: 0%;
       margin-top: 0%;
       padding: 0,0,0,0;
+
+      display: block;
+      -webkit-margin-before: 1em;
+      -webkit-margin-after: 1em;
+      -webkit-margin-start: 0px;
+      -webkit-margin-end: 0px;
     
     }
-
-
-
-
-
-
-
-
-
-
-
-
   }
 }
 
@@ -59,10 +54,11 @@
 pre[class*='language-'] .tag,
 pre[class*='language-'] .number {
   align-items: stretch;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color:blue;
   border-radius: 0;
   display: inline;
-  font-size: 10px;
+  font-size: 8px;
   justify-content: flex-start;
   line-height: normal;
   padding: 0;
@@ -72,6 +68,7 @@ pre[class*='language-'] .number {
   text-align: left;
   vertical-align: baseline;
 }
+
 
 :not(pre) > code[class*='language-'] {
   background:rgba(27, 31, 35, 0.05) ;
@@ -83,3 +80,13 @@ pre[class*='language-'] .number {
   margin: 0 auto;
 }
 
+.cd-top.cd-top--show { 
+  /* the button becomes visible */ 
+  visibility: visible;
+  opacity: 1;
+ } 
+ 
+ .cd-top.cd-top--fade-out { 
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */ 
+  opacity: .5; 
+ }

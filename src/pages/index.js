@@ -10,19 +10,18 @@ export default function IndexPage(props) {
     .map(edge => edge.node)
 
   return ( 
-  <div >
-    <div className = "container" >
-      <div className = "columns" >
- 
-        <div className = "column  is-10-mobile is-offset-1-mobile is-10-tablet is-offset-1-tablet" >
-        <div className="content">
-        <h1 className="has-text-weight-bold is-size-2">Latest Posts</h1>
+    <div >
+      <div className="container" >
+        <div className="columns" >
+          <div className="column  is-10-mobile is-offset-1-mobile is-10-tablet is-offset-1-tablet" >
+            <div className="content">
+              <h1 className="has-text-weight-bold is-size-2">Latest Posts</h1>
+            </div>
+            <PostList postsData={postsData} />
+          </div>
+        </div>
       </div>
-          <PostList postsData = {postsData}/> 
-        </div> 
-      </div>
-     </div>
-  </div>
+    </div>
   )
 }
 
