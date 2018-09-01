@@ -14,6 +14,7 @@ const Navbar = ({ toggled, handleToggled }) => (
         <span className="icon">
           <i className="fas fa-home" />
         </span>
+        <span>{'  '}HOME</span>
       </Link>
     </div>
     <div
@@ -23,10 +24,16 @@ const Navbar = ({ toggled, handleToggled }) => (
 
     <div className="navbar-start">
       <Link className="navbar-item" to="/tags">
-        <h6 className="has-text-light">TAGS</h6>
+      <span className="icon">
+          <i className="fas fa-tags" />
+        </span>
+        <span>{'  '}TAGS</span>
       </Link>
       <Link className="navbar-item" to="/projects">
-        <h6 className="has-text-light">PROJECTS</h6>
+      <span className="icon">
+          <i className="fab fa-osi" />
+        </span>
+        <span>{'  '}PROJECTS</span>
       </Link>
     </div>
     <div className="navbar-end">
