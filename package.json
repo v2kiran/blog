@@ -30,7 +30,9 @@
     "gatsby-transformer-remark": "^1.7.44",
     "mdi": "^2.0.46",
     "prismjs": "^1.15.0",
-    "typeface-noto-sans": "^0.0.35"
+    "react-share": "^2.3.1",
+    "typeface-noto-sans": "^0.0.35",
+    "url-join": "^4.0.0"
   },
   "keywords": [
     "gatsby",

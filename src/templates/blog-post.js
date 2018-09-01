@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import About from '../components/About'
+import SocialLinks from "../components/SocialLinks";
 
 import './blog-post.scss'
 
@@ -11,12 +12,7 @@ const ButtonWrapper = styled.div`
   justify-content: center;
   margin-top: 1rem;
 `
-    //browser window scroll (in pixels) after which the "back to top" link is shown
-    var offset = 300, 
-    //browser window scroll (in pixels) after which the "back to top" link opacity is reduced 
-    offsetOpacity = 1200,
-    //duration of the top scrolling animation (in ms)
-    scrollDuration = 700;
+
 
 const TagList = ({ tags }) => (
   <div>
@@ -58,6 +54,7 @@ export default class Template extends React.Component {
 
   render() {
     const { markdownRemark: post } = this.props.data
+    //const postNode = this.props.data.markdownRemark;
     const { siteUrl } = this.props.data.site.siteMetadata
     const tags = post.frontmatter.tags
     //const myExtScript = require('./topscroll') 
@@ -66,18 +63,17 @@ export default class Template extends React.Component {
       <div className="container ">
         <div className="columns is-mobile">
           <div className="column is-10-mobile is-offset-1-mobile is-8-tablet is-offset-2-tablet is-9-desktop is-offset-1-desktop">
-            <div className="content">            
+            <div className="content">  
+              <a name="top"></a>          
               <div className="post-title">
-              <a name="top"></a>
-                <h1 className="title is-size-2 has-text-weight-bold is-bold-light has-text-dark-light"> {post.frontmatter.title} </h1>{' '}
-                <span className="has-text-dark is-size-6">
-                  {' '}
-                  <div style={{fontSize: "13px"}}>
-                  {post.frontmatter.date}{' '}
-                  </div>
-                  
-                </span>{' '}
-              </div>{' '}
+                  <span className="is-uppercase has-text-dark" style={{fontSize: "12px",fonWeight:"600"}}>
+                    {post.frontmatter.date}
+                  </span>  
+                  <h1 className="title is-size-2 has-text-weight-bold is-bold-light has-text-dark-light"> {post.frontmatter.title} </h1>
+              </div>
+              <div className="has-text-dark has-text-weight-semibold" style={{fontSize: "14px",fonWeight:"600"}}>
+                by {post.frontmatter.author}
+              </div>
               <br></br>
               <div
                 dangerouslySetInnerHTML={{
@@ -87,6 +83,7 @@ export default class Template extends React.Component {
               <hr />
               <a href="#top">Back to top</a>
               <TagList tags={tags} /> <About />
+              <SocialLinks postPath={post.frontmatter.path} postNode={post} />
               <ButtonWrapper>
                 <Link to="/" className="button is-light  is-large">
                   <span className="icon is-medium">
@@ -109,7 +106,8 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
-        date(formatString: "YYYY/MM/DD")
+        date(formatString: "MMMM DD, YYYY")
+        author
         path
         title
         tags
