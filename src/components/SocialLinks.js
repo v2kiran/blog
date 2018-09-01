@@ -18,14 +18,14 @@ import {
   RedditIcon
 } from "react-share";
 import urljoin from "url-join";
-import config from "../../../data/SiteConfig";
+import config from "../../data/SiteConfig";
 import "./SocialLinks.css";
 
 class SocialLinks extends Component {
   render() {
     const { postNode, postPath, mobile } = this.props;
     const post = postNode.frontmatter;
-    const url = urljoin(config.siteUrl, config.pathPrefix, postPath);
+    const url = urljoin(config.siteUrl, postPath);
     const iconSize = mobile ? 36 : 48;
     const filter = count => (count > 0 ? count : "");
     const renderShareCount = count => (
@@ -49,7 +49,7 @@ class SocialLinks extends Component {
             {count => renderShareCount(count)}
           </GooglePlusShareCount>
         </GooglePlusShareButton>
-        <FacebookShareButton url={url} quote={postNode.excerpt}>
+        <FacebookShareButton url={url} quote={post.excerpt}>
           <FacebookIcon round size={iconSize} />
           <FacebookShareCount url={url}>
             {count => renderShareCount(count)}
@@ -58,7 +58,7 @@ class SocialLinks extends Component {
         <LinkedinShareButton
           url={url}
           title={post.title}
-          description={postNode.excerpt}
+          description={post.excerpt}
         >
           <LinkedinIcon round size={iconSize} />
           <LinkedinShareCount url={url}>
