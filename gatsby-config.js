@@ -53,7 +53,6 @@ module.exports = {
               fonts: [
                 'Fira Mono',
                 'Google Sans'
-
               ]
             }
           },

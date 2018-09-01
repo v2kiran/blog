@@ -1,5 +1,6 @@
 ---
 title: PowerShell Arrays & Generic Lists
+author: Kiran Reddy
 date: "2015-06-22T22:40:32.169Z"
 layout: post
 draft: false
