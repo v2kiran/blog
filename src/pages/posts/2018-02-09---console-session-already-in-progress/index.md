@@ -53,7 +53,7 @@ ping 192.168.1.5
 
 The user that I was trying to connect already had access to the remote computer and the firewall still retained the exception for the rdp connection so this seemed rather puzzling.
 
-<figure class="float-right" style="width: 560px">
+<figure class="is-shadowless" style="width: 560px">
 	<img src="./rdp_user.png" alt="RDP user">
 	<figcaption>RDP User</figcaption>
 </figure>
