@@ -51,9 +51,7 @@ module.exports = {
             resolve: 'gatsby-plugin-google-fonts',
             options: {
               fonts: [
-                'Source Code Pro',
-                'Google Sans'
-              ]
+                'Source Code Pro'              ]
             }
           },
           'gatsby-remark-autolink-headers',
