@@ -51,7 +51,7 @@ module.exports = {
             resolve: 'gatsby-plugin-google-fonts',
             options: {
               fonts: [
-                'Fira Mono',
+                'Source Code Pro',
                 'Google Sans'
               ]
             }

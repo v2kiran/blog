@@ -9,12 +9,12 @@ const Navbar = ({ toggled, handleToggled }) => (
     aria-label="main navigation"
     //style={{backgroundColor: "#363636"}}
   >
-    <div className="navbar-brand">
+    <div className="navbar-brand" style={{marginLeft:'10px'}}>
       <Link className="navbar-item" to="/">
         <span className="icon">
-          <i className="fas fa-home" />
+          <i className="fas fa-home" style={{color: '#61dafb'}} />
         </span>
-        <span>{'  '}HOME</span>
+        <span style={{fontWeight:'700',color: '#61dafb'}}>{'  '}HOME</span>
       </Link>
     </div>
     <div
@@ -27,13 +27,13 @@ const Navbar = ({ toggled, handleToggled }) => (
       <span className="icon">
           <i className="fas fa-tags" />
         </span>
-        <span>{'  '}TAGS</span>
+        <span style={{fontWeight:'300',lineHeight:'18px'}}>{'  '}TAGS</span>
       </Link>
       <Link className="navbar-item" to="/projects">
       <span className="icon">
           <i className="fab fa-osi" />
         </span>
-        <span>{'  '}PROJECTS</span>
+        <span style={{fontWeight:'300',lineHeight:'18px'}}>{'  '}PROJECTS</span>
       </Link>
     </div>
     <div className="navbar-end">

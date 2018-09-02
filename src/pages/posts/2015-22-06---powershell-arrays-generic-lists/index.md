@@ -34,7 +34,7 @@ as you can see we can store just about any type of data in an array which can be
 
 Instead of expanding the original array the contents of the ‘myarray’ variable is copied to a new array along with the ‘new item’ to be added and then the original is overwritten. This is fine in most situations but if you need to add a lot of items in say a loop then an ‘Arraylist’ may be the better option.
 
- 
+
 
 ## System.Collections.Arraylist
  
@@ -52,7 +52,7 @@ $myarray.Add('Hello World')
 $myarray.Add((Get-Date)) 
 ```
  
-This is looking much better but again the ‘arraylist’ allows just about any type of data to be added. So what if we wanted to make sure that we have an array that is homogenous or in other words contains data, that is of just one particular type.  We can do so using ‘Generic Lists’.
+This is looking much better but again the [‘arraylist’](https://msdn.microsoft.com/en-us/library/41107z8a.aspx) allows just about any type of data to be added. So what if we wanted to make sure that we have an array that is homogenous or in other words contains data, that is of just one particular type.  We can do so using ‘Generic Lists’.
 
  
 
