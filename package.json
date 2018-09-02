@@ -31,6 +31,7 @@
     "mdi": "^2.0.46",
     "prismjs": "^1.15.0",
     "react-share": "^2.3.1",
+    "tocbot": "^4.3.2",
     "typeface-noto-sans": "^0.0.35",
     "url-join": "^4.0.0"
   },

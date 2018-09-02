@@ -3,7 +3,9 @@ import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import About from '../components/About'
-import SocialLinks from "../components/SocialLinks";
+import SocialLinks from '../components/SocialLinks'
+import 'tocbot/dist/tocbot.css'
+import { Tocbot } from './tocbot'
 
 import './blog-post.scss'
 
@@ -12,7 +14,6 @@ const ButtonWrapper = styled.div`
   justify-content: center;
   margin-top: 1rem;
 `
-
 
 const TagList = ({ tags }) => (
   <div>
@@ -57,30 +58,42 @@ export default class Template extends React.Component {
     //const postNode = this.props.data.markdownRemark;
     const { siteUrl } = this.props.data.site.siteMetadata
     const tags = post.frontmatter.tags
-    //const myExtScript = require('./topscroll') 
+    const tocbot = require('./tocbot.js')
 
     return (
+
       <div className="container ">
         <div className="columns is-mobile">
           <div className="column is-10-mobile is-offset-1-mobile is-8-tablet is-offset-2-tablet is-9-desktop is-offset-1-desktop">
-            <div className="content">  
-              <a name="top"></a>          
+            <div className="content">
+              <a name="top" />
               <div className="post-title">
-                  <span className="is-uppercase has-text-dark" style={{fontSize: "12px",fonWeight:"600"}}>
-                    {post.frontmatter.date}
-                  </span>  
-                  <h1 className="title is-size-2 has-text-weight-bold is-bold-light has-text-dark-light"> {post.frontmatter.title} </h1>
+                <span
+                  className="is-uppercase has-text-dark"
+                  style={{ fontSize: '12px', fonWeight: '600' }}
+                >
+                  {post.frontmatter.date}
+                </span>
+                <h1 className="title is-size-2 has-text-weight-bold is-bold-light has-text-dark-light">
+                  {' '}
+                  {post.frontmatter.title}{' '}
+                </h1>
               </div>
-              <div className="has-text-dark has-text-weight-semibold" style={{fontSize: "14px",fonWeight:"600"}}>
+              <div
+                className="has-text-info has-text-weight-bold"
+                style={{ fontSize: '14px', fonWeight: '600' }}
+              >
                 by {post.frontmatter.author}
               </div>
-              <br></br>
+              <br />
               <div
+                className="js-toc-content"
                 dangerouslySetInnerHTML={{
                   __html: post.html,
                 }}
               />{' '}
-              <hr />
+              <Tocbot />
+              <hr /> 
               <a href="#top">Back to top</a>
               <TagList tags={tags} /> <About />
               <SocialLinks postPath={post.frontmatter.path} postNode={post} />
@@ -94,9 +107,15 @@ export default class Template extends React.Component {
               </ButtonWrapper>{' '}
             </div>{' '}
           </div>{' '}
+          <div className="article-sidebar">
+                  <nav className="toc js-toc" />
+                </div>
+
+     
         </div>{' '}
       </div>
-      
+
+               
     )
   }
 }
