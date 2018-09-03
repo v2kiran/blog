@@ -17,12 +17,12 @@ description: "Solving the Error: Your computer could not connect to another cons
 
 While trying to rdp from one windows machine to another windows machine you get the following error:
 
-<p align="center">
+
 <figure  style="width: 700px">
 	<img src="./rdp_error.png" alt="RDP error">
 	<figcaption>RDP Error</figcaption>
 </figure>
-</p>
+
 
 ## The Solution
 >The IPaddress of the remote computer had changed so I just had to find out the new ipaddress and rdp to it and thats it!
@@ -95,11 +95,11 @@ After all this I was still getting the same old error. Finally the step that wor
 
 In my case the remote computer had an IPaddress of `192.168.1.7` whereas I was trying to rdp to `192.168.1.6` .
 
-What had happened was that the remote computer had somehow lost the IPaddress it previosuly held `192.168.1.6` and obtained a new one `192.168.1.7`.To make matters worse my Ipad now held the troublesome IPaddress of `192.168.1.6` which explained why I was able to ping it.
+What had happened was that the remote computer had somehow lost the IPaddress it previosuly held `192.168.1.6` and obtained a new one `192.168.1.7`.To make matters worse my source machine now held the troublesome IPaddress of `192.168.1.6` which explained why I was able to ping it.
 
-Since this was working before it never occured to me that the IPaddress might have changed.
+Since this was working before it never occured to me that the IPaddresses might have changed.
 
-Essentially I was trying to rdp from my windows 10 machine to my Ipad which was never going to work but the error message was misleading and hence the saga that followed. 
+Essentially I was trying to rdp from lets say computer named "PC1" to "PC1"(inception) which was never going to work but the error message was misleading and hence the saga that followed. 
 
 I have listed all the steps that I tried because some of them may help people having the same or similar issue.
 
