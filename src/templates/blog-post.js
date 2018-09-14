@@ -62,18 +62,13 @@ export default class Template extends React.Component {
 
     return (
 
-      <div className="container ">
+      <div className="container " >
         <div className="columns is-mobile">
           <div className="column is-10-mobile is-offset-1-mobile is-8-tablet is-offset-2-tablet is-9-desktop is-offset-1-desktop">
             <div className="content">
               <a name="top" />
               <div className="post-title">
-                <span
-                  className="is-uppercase has-text-dark"
-                  style={{ fontSize: '12px', fonWeight: '600' }}
-                >
-                  {post.frontmatter.date}
-                </span>
+
                 <h1 className="title is-size-2 has-text-weight-bold is-bold-light has-text-dark-light">
                   {' '}
                   {post.frontmatter.title}{' '}
@@ -83,8 +78,21 @@ export default class Template extends React.Component {
                 className="has-text-info has-text-weight-bold"
                 style={{ fontSize: '14px', fonWeight: '600' }}
               >
-                by {post.frontmatter.author}
+                by {post.frontmatter.author}{' '} 
+                <span 
+                className=" has-text-dark"
+                style={{marginLeft: '20px', fontSize: '12px', fonWeight: '600' }}
+                >
+                  on {' '}
+                </span>
+                <span
+                  className="is-uppercase "
+                  style={{marginLeft: '20px', fontSize: '12px', fonWeight: '600' , color: "#d9411e" }}
+                >
+                   {post.frontmatter.date}
+                </span>
               </div>
+  
               <br />
               <div
                 className="js-toc-content"
@@ -109,9 +117,7 @@ export default class Template extends React.Component {
           </div>{' '}
           <div className="article-sidebar">
                   <nav className="toc js-toc" />
-                </div>
-
-     
+                </div>     
         </div>{' '}
       </div>
 

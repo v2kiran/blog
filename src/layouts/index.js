@@ -5,6 +5,8 @@ import './layout-style.scss';
 import favicon from '../assets/favicon.ico';
 import Navbar from '../components/Navbar';
 
+//process.setMaxListeners(Infinity);
+
 const Footer = () => (
   <div className="container is-fluid">
   <div className="content has-text-centered has-background-info">
