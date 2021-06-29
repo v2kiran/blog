@@ -1,0 +1,7 @@
+[submodule "kiranreddyblog/themes/soho"]
+	path = kiranreddyblog/themes/soho
+	url = https://github.com/alexandrevicenzi/soho.git
+[submodule "kiranreddyblog/public"]
+	path = kiranreddyblog/public
+	url = https://github.com/v2kiran/kiranreddy.github.io.git
+	branch = main
