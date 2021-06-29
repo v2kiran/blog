@@ -2,6 +2,8 @@ baseURL = "https://v2kiran.github.io/site/"
 languageCode = "en-us"
 title = "Kiran Reddy"
 
+canonifyURLs=false
+
 theme="soho"
 enableInlineShortcodes = true
 
